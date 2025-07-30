@@ -53,7 +53,7 @@ Parent selesai
 Jika ada screenshot:
 
 ```
-![hasil cowtest](./screenshots/cowtest_output.png)
+<img width="588" height="476" alt="Modul 2" src="https://github.com/user-attachments/assets/79eea46c-7b97-400d-9806-6be1664180dc" />
 ```
 
 ## ⚠️ Kendala yang Dihadapi
