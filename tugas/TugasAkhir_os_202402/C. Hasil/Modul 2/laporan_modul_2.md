@@ -5,7 +5,7 @@
 **Nama**: `Salma Zaidah`
 **NIM**: `240202884`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 1 – System Call dan Instrumentasi Kernel)`
+`Modul 2 – Penjadwalan CPU Lanjutan (Priority Scheduling Non-Preemptive)`
 
 ---
 
