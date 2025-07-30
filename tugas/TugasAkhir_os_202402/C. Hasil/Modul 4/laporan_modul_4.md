@@ -58,11 +58,9 @@ Write blocked as expected
 
 Jika ada screenshot:
 
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
 
----
+<img width="540" height="318" alt="Modul 4" src="https://github.com/user-attachments/assets/44c1b4fa-7cc5-40bf-b14d-e4d0bb9d92c5" />
+
 
 ## ⚠️ Kendala yang Dihadapi
 
