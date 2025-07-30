@@ -2,44 +2,46 @@
 
 **Mata Kuliah**: Sistem Operasi
 **Semester**: Genap / Tahun Ajaran 2024–2025
-**Nama**: `<Nama Lengkap>`
-**NIM**: `<Nomor Induk Mahasiswa>`
+**Nama**: `Salma Zaidah`
+**NIM**: `240202884`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 1 – System Call dan Instrumentasi Kernel)`
+`Modul 3 – Manajemen Memori Tingkat Lanjut (xv6-public x86)`
 
 ---
 
 ## 📌 Deskripsi Singkat Tugas
 
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
+Pada Modul 3 – Manajemen Memori Tingkat Lanjut, saya mengembangkan fitur Copy-on-Write Fork (CoW) dan Shared Memory ala System V pada kernel xv6-public.
+1. Copy-on-Write (CoW)
+*Fork tidak langsung menyalin semua memori.
+*Halaman berbagi read-only dan disalin hanya jika ada proses yang melakukan write.
+*Menggunakan reference count pada physical page.
 
-* **Modul 1 – System Call dan Instrumentasi Kernel**:
-  Menambahkan dua system call baru, yaitu `getpinfo()` untuk melihat proses yang aktif dan `getReadCount()` untuk menghitung jumlah pemanggilan `read()` sejak boot.
+2. Shared Memory
+*Implementasi shmget(int key) dan shmrelease(int key) untuk berbagi halaman memori antar proses.
+*Menggunakan reference count agar halaman dilepas hanya jika tidak ada proses yang menggunakan.
+
 ---
 
 ## 🛠️ Rincian Implementasi
 
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
+*Menambahkan array ref_count[] pada vm.c untuk menghitung referensi tiap halaman fisik.
+*Membuat flag PTE_COW di mmu.h untuk menandai halaman Copy-on-Write.
+*Mengganti copyuvm() menjadi cowuvm() di vm.c agar fork menggunakan CoW.
+*Memodifikasi trap() di trap.c untuk menangani page fault yang memerlukan penyalinan halaman.
+*Menambahkan tabel shmtab[] untuk memetakan key ke halaman shared memory.
+*Membuat syscall shmget() dan shmrelease() di sysproc.c, syscall.c, user.h, dan usys.S.
+*Membuat dua program uji: cowtest.c dan shmtest.c untuk menguji fungsionalitas CoW dan Shared Memory.
 
-### Contoh untuk Modul 1:
 
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
 ---
 
 ## ✅ Uji Fungsionalitas
 
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
+Program uji yang digunakan:
 
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
-* `cowtest`: untuk menguji fork dengan Copy-on-Write
-* `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
-* `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
-* `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
+*cowtest → menguji Copy-on-Write pada fork().
+*shmtest → menguji shared memory antar proses.
 
 ---
 
@@ -61,12 +63,6 @@ Child reads: A
 Parent reads: B
 ```
 
-### 📍 Contoh Output `chmodtest`:
-
-```
-Write blocked as expected
-```
-
 Jika ada screenshot:
 
 ```
@@ -77,21 +73,17 @@ Jika ada screenshot:
 
 ## ⚠️ Kendala yang Dihadapi
 
-Tuliskan kendala (jika ada), misalnya:
-
-* Salah implementasi `page fault` menyebabkan panic
-* Salah memetakan alamat shared memory ke USERTOP
-* Proses biasa bisa akses audit log (belum ada validasi PID)
+*Pernah terjadi kernel panic karena salah mengatur reference count saat decref.
+*Page fault tidak tertangani jika flag COW lupa ditambahkan → proses langsung mati.
+*Shared memory tidak terlepas jika ada proses keluar tanpa memanggil shmrelease.
 
 ---
 
 ## 📚 Referensi
 
-Tuliskan sumber referensi yang Anda gunakan, misalnya:
-
-* Buku xv6 MIT: [https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
-* Repositori xv6-public: [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-* Stack Overflow, GitHub Issues, diskusi praktikum
+*Buku xv6 MIT: https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf
+*Repositori xv6-public: https://github.com/mit-pdos/xv6-public
+*Diskusi praktikum Sistem Operasi
 
 ---
 
