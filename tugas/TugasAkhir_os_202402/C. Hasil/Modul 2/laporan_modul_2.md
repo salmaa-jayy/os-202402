@@ -43,7 +43,7 @@ Program uji yang digunakan:
 
 Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
-### 📍 Contoh Output `ptest`:
+### 📍 Output `ptest`:
 
 ```
 Child 2 selesai
