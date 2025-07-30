@@ -21,12 +21,12 @@ Pada Modul 5 – Audit dan Keamanan Sistem, saya menambahkan mekanisme Audit Log
 
 ## 🛠️ Rincian Implementasi
 
-*Menambahkan struktur audit_entry dan array audit_log[] di syscall.c untuk menyimpan log.
-*Memodifikasi fungsi syscall() di syscall.c untuk mencatat setiap pemanggilan system call yang valid.
-*Membuat syscall baru get_audit_log() di sysproc.c yang menyalin isi log ke buffer user jika pid == 1.
-*Menambahkan deklarasi dan nomor syscall di syscall.h, user.h, usys.S, dan mendaftarkannya di syscall.c.
-*Menambahkan program uji audit.c untuk menampilkan log dari user-space.
-*Memastikan akses ke get_audit_log() dibatasi hanya untuk PID 1 (init process).
+-Menambahkan struktur audit_entry dan array audit_log[] di syscall.c untuk menyimpan log.
+-Memodifikasi fungsi syscall() di syscall.c untuk mencatat setiap pemanggilan system call yang valid.
+-Membuat syscall baru get_audit_log() di sysproc.c yang menyalin isi log ke buffer user jika pid == 1.
+-Menambahkan deklarasi dan nomor syscall di syscall.h, user.h, usys.S, dan mendaftarkannya di syscall.c.
+-Menambahkan program uji audit.c untuk menampilkan log dari user-space.
+-Memastikan akses ke get_audit_log() dibatasi hanya untuk PID 1 (init process).
 
 ---
 
