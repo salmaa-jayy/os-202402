@@ -49,14 +49,14 @@ Program uji yang digunakan:
 
 Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
-### 📍 Contoh Output `cowtest`:
+### 📍 Output `cowtest`:
 
 ```
 Child sees: Y
 Parent sees: X
 ```
 
-### 📍 Contoh Output `shmtest`:
+### 📍 Output `shmtest`:
 
 ```
 Child reads: A
