@@ -43,7 +43,7 @@ Program uji yang digunakan:
 
 Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
-### 📍 Contoh Output `ptest`:
+### 📍 Output `ptest`:
 
 ```
 PID     MEM     NAME
@@ -52,7 +52,7 @@ PID     MEM     NAME
 3       12288   ptest
 ```
 
-### 📍 Contoh Output `rtest`:
+### 📍 Output `rtest`:
 
 ```
 Read Count Sebelum: 12
