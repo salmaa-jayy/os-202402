@@ -62,11 +62,8 @@ Read Count Setelah: 13
 
 Jika ada screenshot:
 
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
+<img width="588" height="476" alt="Modul 2" src="https://github.com/user-attachments/assets/7a1e1fb7-a9e2-4620-a63d-eb52c15c4ef8" />
 
----
 
 ## ⚠️ Kendala yang Dihadapi
 
