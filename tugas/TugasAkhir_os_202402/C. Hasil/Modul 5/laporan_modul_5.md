@@ -59,11 +59,8 @@ Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
 Jika ada screenshot:
 
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
+<img width="286" height="145" alt="Modul 5" src="https://github.com/user-attachments/assets/7c19fc53-bb64-4aa5-b1a9-250588ca1070" />
 
----
 
 ## ⚠️ Kendala yang Dihadapi
 
