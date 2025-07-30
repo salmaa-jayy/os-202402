@@ -62,8 +62,7 @@ Read Count Setelah: 13
 
 Jika ada screenshot:
 
-<img width="588" height="476" alt="Modul 2" src="https://github.com/user-attachments/assets/7a1e1fb7-a9e2-4620-a63d-eb52c15c4ef8" />
-
+<img width="722" height="362" alt="Modul 1" src="https://github.com/user-attachments/assets/8f15dd67-8e2f-45d5-a82d-9f56a9776383" />
 
 ## ⚠️ Kendala yang Dihadapi
 
