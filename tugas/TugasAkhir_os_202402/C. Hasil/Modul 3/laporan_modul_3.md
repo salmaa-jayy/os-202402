@@ -65,11 +65,8 @@ Parent reads: B
 
 Jika ada screenshot:
 
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
+<img width="582" height="481" alt="Modul 3" src="https://github.com/user-attachments/assets/dcaf1496-a5df-4ff6-9a5d-dae82a378ef8" />
 
----
 
 ## ⚠️ Kendala yang Dihadapi
 
