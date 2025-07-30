@@ -44,13 +44,13 @@ Program uji yang digunakan:
 
 ## 📷 Hasil Uji
 
-### 📍 Contoh Output `chmodtest`:
+### 📍 Output `chmodtest`:
 
 ```
 Write blocked as expected
 ```
 
-### 📍 Contoh Output `randomtest`:
+### 📍 Output `randomtest`:
 
 ```
 19 45 232 11 89 77 254 1
